@@ -1,0 +1,26 @@
+{
+    "name": "feed-generator",
+    "version": "1.0.0",
+    "description": "Generate feeds for each user",
+    "main": "src/main.js",
+    "type": "module",
+    "scripts": {
+        "dev": "nodemon ./src/main.js",
+        "start": "node ./src/main.js",
+        "format": "prettier --write ."
+    },
+    "dependencies": {
+        "dotenv": "^16.4.7",
+        "express": "^5.0.1",
+        "node-appwrite": "^9.0.0",
+        "pino": "^9.6.0",
+        "pino-http": "^10.4.0",
+        "pino-pretty": "^13.0.0",
+        "ws": "^8.18.2"
+    },
+    "devDependencies": {
+        "@types/node": "^22.13.11",
+        "nodemon": "^3.1.10",
+        "prettier": "^3.0.0"
+    }
+}
