@@ -1,0 +1,6 @@
+[submodule "930-web"]
+	path = web
+	url = git@github.com:chrisaugu/930
+[submodule "930-api"]
+	path = api
+	url = git@github.com:chrisaugu/930-api

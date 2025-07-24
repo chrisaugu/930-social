@@ -2,17 +2,17 @@ import { HttpContext } from "@adonisjs/core/http";
 import User from '#models/user';
 
 export default class UserService {
-    constructor(
-        private ctx: HttpContext
-    ) {
-    }
+  constructor(
+    private ctx: HttpContext
+  ) {
+  }
 
-    all() {
-      // return users from db
-      console.log(this.ctx.auth.user);
-    }
+  all() {
+    // return users from db
+    console.log(this.ctx.auth.user);
+  }
 
-    async create() {
+  async create() {
     /**
      * Create a new user
     */
@@ -21,18 +21,18 @@ export default class UserService {
       email: 'romain@adonisjs.com',
     })
     return user;
-    }
+  }
 
-    async find() {
+  async find() {
     /**
      * Find a user by primary key
      */
     const user = await User.find(1)
     // const user = await User.query().where('username', 'rlanz').first()
     return user;
-    }
+  }
 
-    async update() {
+  async update() {
     /**
      * Update a user
      */
@@ -40,15 +40,14 @@ export default class UserService {
     const user = await User.find(1)
     user?.username = 'romain'
     await user?.save()
-    }
+  }
 
-    async delete() {
+  async delete() {
     /**
      * Delete a user
      */
     const user = await User.find(1)
     await user?.delete()
-    }
-
   }
-  
+
+}
